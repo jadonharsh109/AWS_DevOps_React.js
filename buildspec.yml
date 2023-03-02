@@ -10,5 +10,9 @@ phases:
         
     post_build:
       commands:
-      - aws s3 cp -r ./build s3://my-aws-devops/artifact/
+      - echo "Everything workes fine'
+      
+artifacts:
+    files: 
+      - build/*
 
