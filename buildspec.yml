@@ -10,7 +10,7 @@ phases:
         
     post_build:
       commands:
-      - echo "Everything workes fine'
+      - echo "Everything workes fine"
       
 artifacts:
     files: 
