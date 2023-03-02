@@ -18,9 +18,8 @@ phases:
     post_build:
       commands:
       - echo "Build has been successfully built"
-      - sudo zip -r artifact.zip build
-      - sudo rm -r !(artifact.zip)
+
 
 artifacts:
   files:
-    - "**/*"
+    - "build/**"
