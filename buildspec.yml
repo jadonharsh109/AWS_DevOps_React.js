@@ -18,6 +18,8 @@ phases:
       commands:
       - echo "Build has been successfully built"
       - sudo zip -r artifact.zip build
+      - sudo mkdir /opt/artifact/
+      - sudo mv -r artifact.zip /opt/artifact/
 artifacts:
   files: 
-    - artifact.zip
+    - /opt/artifact/artifact.zip
