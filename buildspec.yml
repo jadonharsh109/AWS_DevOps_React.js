@@ -21,4 +21,5 @@ phases:
       - sudo mkdir /opt/artifact/
       - sudo mv -r artifact.zip /opt/artifact/
 artifacts:
-  files: 'build/*'
+  files:
+    - '**/*'
