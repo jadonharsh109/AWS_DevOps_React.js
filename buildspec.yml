@@ -4,15 +4,16 @@ phases:
     pre_build:
       commands:
         - npm install
+        - apt install zip -y
     build:
       commands:
         - npm run build
         
     post_build:
       commands:
-      - echo "Everything workes fine"
+      - zip build.zip build/*
       
 artifacts:
     files: 
-      - build/*
+      - build.zip
 
