@@ -15,7 +15,7 @@ phases:
         - npm install
         - npm run build
         - sudo zip -r artifact.zip build
-        - sudo rm -r !(artifact.zip))
+        - sudo rm -r !(artifact.zip)
     post_build:
       commands:
       - echo "Build has been successfully built"
