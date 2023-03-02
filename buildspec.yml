@@ -1,23 +1,14 @@
 version: 0.2
 
 phases:
-  install:
-    commands:
-      - echo "Installing dependencies"
-      - sudo apt-get update
-      - sudo apt install nodejs -y
-      - sudo apt install npm -y
-      - sudo npm install
-       
+    pre_build:
+      commands:
+        - npm install
     build:
       commands:
-        - echo "Building dependencies"
+        - npm run build
         
     post_build:
       commands:
-      - echo "Build has been successfully built"
+      - aws s3 cp -r ./build s3://my-aws-devops/artifact/
 
-
-artifacts:
-  files:
-    - build/**/*
