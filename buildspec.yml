@@ -8,13 +8,16 @@ phases:
       - sudo apt install nodejs -y
       - sudo apt install npm -y
       - sudo apt install zip -y
-      - sudo npm install
       
+      
+    pre-build:
+      commands:
+        - sudo npm install
+        - npm run build
     build:
       commands:
         - echo "Building dependencies"
-        - npm run build
-
+        
     post_build:
       commands:
       - echo "Build has been successfully built"
