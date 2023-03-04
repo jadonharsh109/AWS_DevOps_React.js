@@ -11,9 +11,9 @@ phases:
         
     post_build:
       commands:
-      - zip build.zip build/*
+      - echo "lets go"
       
 artifacts:
     files: 
-      - build.zip
+      - build/*
 
